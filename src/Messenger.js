@@ -7,7 +7,7 @@ import namespace from './namespace';
 import { listen, unListen, invariant } from './utils';
 
 /**
- * const pm = Messenger('project', window.parent);
+ * const pm = Messenger('project', window.top);
  *
  * // listen channel
  * pm.on('channel', message => { });
@@ -15,7 +15,7 @@ import { listen, unListen, invariant } from './utils';
  * // listen channel
  * pm.once('channel_once', message => { });
  *
- * // send message to window.parent
+ * // send message to window.top
  * pm.send('channel', 'Hello world');
  *
  * pm.off(channel, func); // cancel listen
